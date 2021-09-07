@@ -35,7 +35,7 @@ void loop() {
 }
 
 void clickWork() {
-  ledOn(curIndex, 100);
+  ledOn(curIndex, 500);
   ledOff(curIndex);
 
   curIndex++;
