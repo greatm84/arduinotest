@@ -1,0 +1,6 @@
+{
+    "sketch": "do_click_work\\do_click_work.ino",
+    "configuration": "cpu=atmega2560",
+    "board": "arduino:avr:mega",
+    "port": "COM6"
+}
