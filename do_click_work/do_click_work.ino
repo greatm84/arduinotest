@@ -38,13 +38,21 @@ void loop() {
   delay(100);
 }
 
+int myDelay = 200;
+
 void clickWork() {
-  ledOn(curIndex, 500);
-  ledOff(curIndex);
+  ledOn(curIndex, myDelay);
+  ledOff(curIndex, myDelay);
 
   curIndex++;
   if (curIndex >= pinCount) {
     curIndex = 0;
+  }
+
+  myDelay -= 10;
+
+  if(myDelay <= 0){
+    myDelay = 300;
     doClickWork = false;
   }
 }
@@ -54,8 +62,9 @@ void ledOn(int index, int howLong) {
   delay(howLong);
 }
 
-void ledOff(int index) {
+void ledOff(int index, int howLong) {
   digitalWrite(pins[index], LOW);
+  delay(howLong);
 }
 
 bool switchClicked(int newValue) {
