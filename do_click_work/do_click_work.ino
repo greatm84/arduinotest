@@ -1,3 +1,7 @@
+// visual studio setting guide
+// https://juahnpop.tistory.com/71
+
+
 
 int pins[] = {2, 3, 4};
 int pinCount = sizeof(pins) / sizeof(int);
