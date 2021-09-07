@@ -25,7 +25,7 @@ void loop() {
   int curValue = digitalRead(sw);
   if (switchClicked(curValue)) {
     doClickWork = true;
-  } 
+  }
 
   if (doClickWork) {
     // must have set doClickWork to false
@@ -35,16 +35,23 @@ void loop() {
 }
 
 void clickWork() {
-  digitalWrite(pins[curIndex], HIGH);
-  delay(100);
-  digitalWrite(pins[curIndex], LOW);
-  delay(100);
+  ledOn(curIndex, 100);
+  ledOff(curIndex);
 
   curIndex++;
   if (curIndex >= pinCount) {
     curIndex = 0;
     doClickWork = false;
   }
+}
+
+void ledOn(int index, int howLong) {
+  digitalWrite(pins[index], HIGH);
+  delay(howLong);
+}
+
+void ledOff(int index) {
+  digitalWrite(pins[index], LOW);
 }
 
 bool switchClicked(int newValue) {
