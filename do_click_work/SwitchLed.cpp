@@ -1,4 +1,3 @@
-#include "Arduino.h"
 #include "SwitchLed.h"
 
 // visual studio setting guide

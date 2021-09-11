@@ -1,4 +1,3 @@
-#include "Arduino.h"
 #include "PadMelody.h"
 #include "pitches.h"
 #include <Keypad.h>

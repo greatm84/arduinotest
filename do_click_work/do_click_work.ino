@@ -1,15 +1,18 @@
 #include "TestBase.h"
-#include "PadMelody.h"
+#include "WaterSensor.h"
 
-TestBase* test;
+TestBase *test;
 
-void setup(){
-  PadMelody padMelody;
+void setup()
+{
+  // PadMelody padMelody;
+  WaterSensor waterSensor;
 
-  test = &padMelody;
+  test = &waterSensor;
   test->setup();
 }
 
-void loop(){
+void loop()
+{
   test->loop();
 }
