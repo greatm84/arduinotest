@@ -1,14 +1,14 @@
 #include "TestBase.h"
-#include "WaterSensor.h"
+#include "GT.h"
 
 TestBase *test;
 
 void setup()
 {
   // PadMelody padMelody;
-  WaterSensor waterSensor;
+  GT gt;
 
-  test = &waterSensor;
+  test = &gt;
   test->setup();
 }
 
